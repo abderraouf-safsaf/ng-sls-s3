@@ -1,4 +1,4 @@
-service: ng-sls
+service: ng-sls-s3
 
 
 plugins:
@@ -6,11 +6,12 @@ plugins:
   - serverless-dotenv-plugin
 
 custom:
-  s3Bucket: dt2-ng-sls-${env:STAGE}
+  s3Bucket: angular-sls-s3-${env:STAGE}
 
 provider:
   name: aws
   runtime: nodejs12.x
+  region: eu-central-1
 
 resources:
   Resources:
